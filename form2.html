@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+    <style>
+        *,
+        *::after,
+        *:before{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font:normal 15px/1 sans-serif;
+        }
+        h1{
+            margin: 1rem 2rem;
+        }
+        
+
+        form{
+            margin: 2rem;
+            width: 800px;
+        }
+        .font{
+            font-family: cursive;
+            color: teal;
+        }
+        .form-box{
+            padding: 1rem;
+            clear: both;
+            width: 100%;
+            position: relative;
+        }
+        .form-box label{
+            font-size: 1rem;
+            float: left;
+            width: 100px;
+            margin-right: 20px;
+        }
+        .form-box input{
+            font-size: 1rem;
+            width: 300px;
+            padding: 0.25rem 1rem;
+        }
+        .form-box select{
+            font-size: 1rem;
+            width: 300px;
+            padding: 0.25rem 1rem;
+        }
+        .form-box option{
+            font-size: 1rem;
+            width: 300px;
+            padding: 0.25rem 1rem;
+        }
+        .form-box input[type="checkbox"]{
+            font-size: 1rem;
+        }
+        .form-box button{
+            font-size: 1rem;
+            border: none;
+            padding: 0.25rem 2rem;
+            margin-right: 1rem;
+            color: rgb(252, 250, 250);
+            background-color: cornflowerblue;
+            cursor: pointer;
+        }
+        .yellow{
+            color: yellowgreen;  
+            font-family: 'Times New Roman', Times, serif;    }
+        .custom{
+            color: rgb(26, 173, 58);
+            font-family: 'Times New Roman', Times, serif;
+        }
+       
+        
+        
+        .error::after{
+            background-color: hsl(10, 60%, 50%);
+            color: papayawhip;
+            font-size: 1rem;
+            line-height: 1.8;
+            width: 350px;
+            padding-left: 1rem;
+            position:absolute;
+            right: 0;
+            content: attr(data-errormsg);
+        }
+    </style>
+</head>
+<body>
+    <h1 class='font'>JMD FORMS</h1>
+    
+    <form id="form-user" action="#" method="post">
+        <div class="form-box error" data-errormsg="">
+            <label for="input-first">NAME</label>
+            <input type="text" id="input-first" autofocus placeholder="First Name" tabindex="1"/>
+        </div>
+        <div class="form-box" data-errormsg="">
+            <label for="input-password">Password</label>
+            <input type="password" id="input-password" required placeholder="Password" tabindex="2" />
+        </div>
+        <div class="form-box" data-errormsg="">
+            <label for="input-email">E-mail</label>
+            <input type="email" id="input-email" required placeholder="E-mail Address" tabindex="3" />
+        </div>
+        <div class="form-box" data-errormsg="">
+            <label for="input-age">HOW MUCH HOURS YOU PLAY </label>
+            <select id="input-age" tabindex="4">
+                <option value="0">Under 1</option>
+                <option value="1">1-2</option>
+                <option value="2">2-4</option>
+                <option value="3">4-5</option>
+                <option value="4">Over 5</option>
+            </select>
+        </div>
+        <h2 class='yellow'>CHECK(TICK) IN THE REQUIRED FIELDS</h2>
+        <div class="form-box" data-errormsg="">
+            <label for="input-comp">Competitive player</label>
+            <input type="checkbox" id="input-comp" value="yes" tabindex="5" checked />
+        </div>
+        <div class="form-box" data-errormsg="">
+            <label for="input-casual">Casual player</label>
+            <input type="checkbox" id="input-casual" value="yes" tabindex="6" checked /> 
+
+        </div>
+        <h3 class='custom'>TIME SLOT YOU WANTS TO PLAY?</h3>
+        <div class="form-box" data-errormsg="">
+            <label for="input-CUST1">MORNING</label>
+            <input type="checkbox" id="input-CUST1" value="yes" tabindex="7" checked /> 
+        </div>
+        <div class="form-box" data-errormsg="">
+            <label for="input-CUST1">AFTERNOON</label>
+            <input type="checkbox" id="input-CUST1" value="yes" tabindex="8" checked /> 
+
+        </div>
+        <div class="form-box" data-errormsg="">
+            <label for="input-CUST1">EVENING</label>
+            <input type="checkbox" id="input-CUST1" value="yes" tabindex="9" checked /> 
+
+        </div>
+        <div class="form-box" data-errormsg="">
+            <label for="input-CUST1">NIGHT</label>
+            <input type="checkbox" id="input-CUST1" value="yes" tabindex="10" checked /> 
+
+        </div>
+        <div class="form-box error" data-errormsg="">
+            <label for="input-first">NAME OF THE ORG </label>
+            <input type="text" id="input-first" autofocus placeholder="SOUL" tabindex="11"/>
+        </div>
+        <div class="form-box error" data-errormsg="">
+            <label for="input-first">Past season(s) record</label>
+            <input type="text" id="input-first" autofocus placeholder="S10 CONQUEROR" tabindex="12"/>
+        </div>
+        
+        <div class="form-box error" data-errormsg="">
+            <label for="input-first">DEVICE NAME</label>
+            <input type="text" id="input-first" autofocus placeholder="IPHONE 10" tabindex="13"/>
+        </div>
+        <div class="form-box" data-errormsg="">
+            <label for="input-age">WILL YOU OPEN UP MIC ENTIRE TIME</label>
+            <select id="input-age" tabindex="14">
+                <option value="0">YES</option>
+                <option value="1">NO</option>
+                
+            </select>
+        </div>
+        <h4 >DO YOU HAVE GOOD AND STABLE INTERNET CONNECTION?</h4>
+        <div class="form-box" data-errormsg="">
+            <label for="input-INTERNET">YES</label>
+            <input type="checkbox" id="input-INTERNET" value="yes" tabindex="15" checked /> 
+
+        </div>
+        <div class="form-box" data-errormsg="">
+            <label for="input-INTERNET">NO</label>
+            <input type="checkbox" id="input-INTERNET" value="yes" tabindex="16" checked /> 
+
+        </div>
+        
+
+
+
+
+        <div class="form-box">
+            <button id="button-cancel">Cancel</button>
+            <button id="button-send">Send</button>
+        </div>
+    </form>
+    
+    <script src="./forms.js"></script>
+</body>
+</html>
